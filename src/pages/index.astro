@@ -1,0 +1,408 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gold-600/20">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-2xl md:text-3xl font-display font-bold tracking-tight">
+            <span class="text-white">BRA</span><span class="text-gold-400">H</span><span class="text-white">UER</span>
+          </span>
+          <span class="text-gold-500 text-sm md:text-base font-medium tracking-widest">TOURS</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#servicios" class="text-gray-300 hover:text-gold-400 transition">Servicios</a>
+          <a href="#destinos" class="text-gray-300 hover:text-gold-400 transition">Destinos</a>
+          <a href="#nosotros" class="text-gray-300 hover:text-gold-400 transition">Nosotros</a>
+          <a href="#contacto" class="text-gray-300 hover:text-gold-400 transition">Contacto</a>
+        </div>
+
+        <a href="#contacto" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/20">
+          Reservar ahora
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden p-2 text-gold-400" aria-label="Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-gold-600/20">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#servicios" class="block text-gray-300 hover:text-gold-400 py-2">Servicios</a>
+        <a href="#destinos" class="block text-gray-300 hover:text-gold-400 py-2">Destinos</a>
+        <a href="#nosotros" class="block text-gray-300 hover:text-gold-400 py-2">Nosotros</a>
+        <a href="#contacto" class="block text-gray-300 hover:text-gold-400 py-2">Contacto</a>
+        <a href="#contacto" class="block mt-2 text-center px-5 py-2.5 rounded-full bg-gold-500 text-black font-semibold">Reservar ahora</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-brand-dark to-black"></div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gold-600/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Flag + Brand -->
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <div class="w-10 h-7 rounded-sm overflow-hidden shadow-lg border border-white/10">
+          <div class="h-1/2 bg-white"></div>
+          <div class="h-1/2 bg-red-600 relative">
+            <div class="absolute top-0 left-0 w-1/3 h-full bg-blue-700 flex items-center justify-center">
+              <span class="text-white text-[8px]">★</span>
+            </div>
+          </div>
+        </div>
+        <span class="text-gold-400/80 text-sm tracking-[0.3em] uppercase">Chile</span>
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight mb-4">
+        <span class="text-white">BRA</span><span class="text-gold-400">H</span><span class="text-white">UER</span>
+      </h1>
+      <p class="text-2xl sm:text-3xl md:text-4xl text-gold-500 font-display tracking-widest mb-6">TOURS</p>
+      
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-2 font-light">
+        Turismo y Transporte
+      </p>
+      <p class="text-gold-400/90 text-base sm:text-lg italic mb-10 font-display">
+        "Tu destino, nuestra ruta"
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#servicios" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-xl shadow-gold-500/25">
+          Descubre nuestros servicios
+        </a>
+        <a href="#contacto" class="px-8 py-3.5 rounded-full border border-gold-500/50 text-gold-400 font-medium hover:bg-gold-500/10 transition">
+          Contáctanos
+        </a>
+      </div>
+
+      <!-- Services icons preview -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+            </svg>
+          </div>
+          <span class="text-xs text-gray-400 tracking-wider uppercase">Excursiones</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+            </svg>
+          </div>
+          <span class="text-xs text-gray-400 tracking-wider uppercase">Traslados</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <span class="text-xs text-gray-400 tracking-wider uppercase">Destinos</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 group">
+          <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <span class="text-xs text-gray-400 tracking-wider uppercase">Experiencias</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicios" class="py-20 md:py-28 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-3">Lo que ofrecemos</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white">Nuestros Servicios</h2>
+        <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- Excursiones -->
+        <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Excursiones</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Tours guiados a los paisajes más impresionantes de Chile: desde el desierto de Atacama hasta la Patagonia.
+          </p>
+        </div>
+
+        <!-- Traslados -->
+        <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Traslados</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Servicio de transporte privado y corporativo con vehículos modernos y conductores profesionales.
+          </p>
+        </div>
+
+        <!-- Destinos -->
+        <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Destinos</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Conoce los mejores lugares de Chile con itinerarios personalizados adaptados a tus intereses.
+          </p>
+        </div>
+
+        <!-- Experiencias -->
+        <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
+            <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Experiencias</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Vivencias únicas: degustaciones, aventura, cultura y naturaleza en un solo viaje inolvidable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinos / Why Us -->
+  <section id="destinos" class="py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black"></div>
+    <div class="absolute top-1/2 left-0 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl -translate-y-1/2"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-3">Por qué elegirnos</p>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Confort y seguridad en cada kilómetro
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            En Brahuers Tours combinamos vehículos de última generación, como nuestra flota de Kia Carnival, 
+            con conductores experimentados y un profundo conocimiento de los destinos chilenos. 
+            Tu comodidad y seguridad son nuestra prioridad.
+          </p>
+          
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="text-gray-300">Flota moderna y confortable (Kia Carnival y más)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="text-gray-300">Conductores profesionales y bilingües</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="text-gray-300">Itinerarios personalizados a tu medida</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full bg-gold-500/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-3 h-3 text-gold-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              </span>
+              <span class="text-gray-300">Cobertura nacional: Norte a Sur de Chile</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-gold-600/30 bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center">
+            <div class="text-center p-8">
+              <div class="w-24 h-24 mx-auto mb-4 rounded-full border-2 border-gold-500/40 flex items-center justify-center">
+                <svg class="w-12 h-12 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                </svg>
+              </div>
+              <p class="text-gold-400 font-display text-xl">Chile de norte a sur</p>
+              <p class="text-gray-500 text-sm mt-2">Atacama · Santiago · Valparaíso · Patagonia</p>
+            </div>
+          </div>
+          <!-- Decorative gold line -->
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 border border-gold-500/20 rounded-2xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Nosotros -->
+  <section id="nosotros" class="py-20 md:py-28 bg-zinc-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-3">Nuestra esencia</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-8">Sobre Brahuers Tours</h2>
+      <p class="text-gray-400 text-lg leading-relaxed mb-6">
+        Somos una empresa chilena dedicada al turismo y transporte de excelencia. 
+        Nacimos con la pasión de mostrar las maravillas de nuestro país de una forma cómoda, 
+        segura y personalizada.
+      </p>
+      <p class="text-gray-400 leading-relaxed">
+        Ya sea un traslado al aeropuerto, un tour privado por el valle del Elqui o una 
+        experiencia gastronómica en el sur, cada viaje es diseñado pensando en ti.
+      </p>
+      
+      <div class="mt-12 flex flex-wrap justify-center gap-8 text-center">
+        <div>
+          <p class="text-3xl font-display font-bold text-gold-400">100%</p>
+          <p class="text-sm text-gray-500 mt-1">Chileno</p>
+        </div>
+        <div>
+          <p class="text-3xl font-display font-bold text-gold-400">24/7</p>
+          <p class="text-sm text-gray-500 mt-1">Disponibilidad</p>
+        </div>
+        <div>
+          <p class="text-3xl font-display font-bold text-gold-400">★</p>
+          <p class="text-sm text-gray-500 mt-1">Experiencia premium</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contacto" class="py-20 md:py-28 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-zinc-950 to-black"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-3">Hablemos</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4">Reserva tu próxima aventura</h2>
+        <p class="text-gray-400">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+      </div>
+
+      <form class="space-y-5 bg-zinc-900/60 border border-gold-600/20 rounded-2xl p-6 sm:p-8">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-sm text-gray-400 mb-1.5">Nombre</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-3 rounded-xl bg-black/50 border border-zinc-700 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition"
+              placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-gray-400 mb-1.5">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 rounded-xl bg-black/50 border border-zinc-700 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition"
+              placeholder="tu@email.com" />
+          </div>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm text-gray-400 mb-1.5">Teléfono / WhatsApp</label>
+          <input type="tel" id="phone" name="phone"
+            class="w-full px-4 py-3 rounded-xl bg-black/50 border border-zinc-700 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition"
+            placeholder="+56 9 1234 5678" />
+        </div>
+        <div>
+          <label for="service" class="block text-sm text-gray-400 mb-1.5">Servicio de interés</label>
+          <select id="service" name="service"
+            class="w-full px-4 py-3 rounded-xl bg-black/50 border border-zinc-700 text-white focus:outline-none focus:border-gold-500 transition">
+            <option value="">Selecciona una opción</option>
+            <option value="excursiones">Excursiones</option>
+            <option value="traslados">Traslados</option>
+            <option value="destinos">Destinos personalizados</option>
+            <option value="experiencias">Experiencias</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-sm text-gray-400 mb-1.5">Mensaje</label>
+          <textarea id="message" name="message" rows="4"
+            class="w-full px-4 py-3 rounded-xl bg-black/50 border border-zinc-700 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition resize-none"
+            placeholder="Cuéntanos sobre tu viaje o consulta..."></textarea>
+        </div>
+        <button type="submit"
+          class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/20">
+          Enviar consulta
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gold-600/20 bg-black py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <p class="text-xl font-display font-bold">
+            <span class="text-white">BRA</span><span class="text-gold-400">H</span><span class="text-white">UER</span>
+            <span class="text-gold-500 text-sm ml-1">TOURS</span>
+          </p>
+          <p class="text-gray-500 text-sm mt-1">Turismo y Transporte · Chile</p>
+        </div>
+        
+        <p class="text-gold-400/80 text-sm italic font-display">
+          "Tu destino, nuestra ruta"
+        </p>
+
+        <div class="flex items-center gap-4">
+          <!-- Chilean flag mini -->
+          <div class="w-8 h-5 rounded-sm overflow-hidden border border-white/10">
+            <div class="h-1/2 bg-white"></div>
+            <div class="h-1/2 bg-red-600 relative">
+              <div class="absolute top-0 left-0 w-1/3 h-full bg-blue-700"></div>
+            </div>
+          </div>
+          <span class="text-gray-500 text-xs">Hecho en Chile 🇨🇱</span>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-6 border-t border-zinc-800 text-center text-gray-600 text-xs">
+        © {new Date().getFullYear()} Brahuers Tours. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
+</Layout>
