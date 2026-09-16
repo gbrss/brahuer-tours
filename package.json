@@ -1,7 +1,7 @@
 {
-  "name": "brahuers-tours",
+  "name": "brahuer-tours",
   "version": "1.0.0",
-  "description": "Landing page for Brahuers Tours - Turismo y Transporte Chile",
+  "description": "Landing page for  Tours - Turismo y Transporte Chile",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
