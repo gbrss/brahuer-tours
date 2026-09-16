@@ -1,4 +1,4 @@
-# Brahuers Tour - Landing Page
+# Brahuer Tour - Landing Page
 
 Landing page profesional para **Brahuer Tours**, empresa de turismo y transporte en Chile.
 
