@@ -1,6 +1,6 @@
-# Brahuers Tours - Landing Page
+# Brahuers Tour - Landing Page
 
-Landing page profesional para **Brahuers Tours**, empresa de turismo y transporte en Chile.
+Landing page profesional para **Brahuer Tours**, empresa de turismo y transporte en Chile.
 
 Construida con **Astro.js** + **Tailwind CSS** (integración oficial).
 
@@ -58,4 +58,4 @@ brahuers-tours/
 
 ---
 
-**Brahuers Tours** · *Tu destino, nuestra ruta*
+**Brahuer Tours** · *Tu destino, nuestra ruta*
