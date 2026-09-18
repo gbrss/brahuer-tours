@@ -139,56 +139,78 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Slider Section -->
-  <section class="py-16 md:py-20 relative overflow-hidden bg-zinc-950">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-2">Destinos destacados</p>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">Descubre Chile con nosotros</h2>
+<section class="py-16 md:py-20 relative overflow-hidden bg-zinc-950">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-2">Destinos destacados</p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">Descubre Chile con nosotros</h2>
+    </div>
+
+    <div class="relative">
+      <div id="slider" class="overflow-hidden rounded-2xl border border-gold-600/20">
+        <div id="slider-track" class="flex transition-transform duration-500 ease-out">
+
+          <!-- Slide 1: Nieve y Cordillera -->
+          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
+            <div class="text-5xl mb-4">⛷️</div>
+            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Nieve & Cordillera de los Andes</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">
+              Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset
+            </p>
+          </div>
+
+          <!-- Slide 2: Viñas -->
+          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
+            <div class="text-5xl mb-4">🍷</div>
+            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Viñas & Experiencias Enológicas</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">
+              Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao
+            </p>
+          </div>
+
+          <!-- Slide 3: Costa y Valparaíso -->
+          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
+            <div class="text-5xl mb-4">🌊</div>
+            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Costa, Valparaíso & Viña del Mar</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">
+              Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca
+            </p>
+          </div>
+
+          <!-- Slide 4: Cajón del Maipo y Naturaleza -->
+          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
+            <div class="text-5xl mb-4">🏔️</div>
+            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Cajón del Maipo & Naturaleza</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">
+              Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque
+            </p>
+          </div>
+
+          <!-- Slide 5: Experiencias en Santiago -->
+          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
+            <div class="text-5xl mb-4">🌃</div>
+            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Experiencias en Santiago</h3>
+            <p class="text-gray-400 max-w-xl mx-auto">
+              Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas
+            </p>
+          </div>
+
+        </div>
       </div>
 
-      <div class="relative">
-        <div id="slider" class="overflow-hidden rounded-2xl border border-gold-600/20">
-          <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-            <!-- Slide 1 -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-              <div class="text-5xl mb-4">🏔️</div>
-              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Patagonia & Torres del Paine</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">Paisajes de otro mundo, glaciares y naturaleza virgen en el extremo sur de Chile.</p>
-            </div>
-            <!-- Slide 2 -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-              <div class="text-5xl mb-4">🏜️</div>
-              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Desierto de Atacama</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">El desierto más árido del mundo, cielos estrellados y formaciones únicas en el norte.</p>
-            </div>
-            <!-- Slide 3 -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-              <div class="text-5xl mb-4">🍷</div>
-              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Valle del Elqui & Viñas</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">Valles verdes, pisco y experiencias enológicas en el corazón de Chile.</p>
-            </div>
-            <!-- Slide 4 -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-              <div class="text-5xl mb-4">🏙️</div>
-              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Santiago & Valparaíso</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">Capital vibrante, cerros coloridos y la mejor gastronomía chilena.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="flex items-center justify-center gap-4 mt-6">
-          <button id="prev-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Anterior">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          <div id="dots" class="flex gap-2"></div>
-          <button id="next-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Siguiente">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
+      <!-- Controls -->
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <button id="prev-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div id="dots" class="flex gap-2"></div>
+        <button id="next-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Siguiente">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Services Section -->
   <section id="servicios" class="py-20 md:py-28 relative">
