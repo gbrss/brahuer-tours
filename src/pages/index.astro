@@ -24,6 +24,9 @@ import Layout from '../layouts/Layout.astro';
         <a href="#contacto" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/20">
           Reservar ahora
         </a>
+         <a href="https://www.flow.cl/app/web/pagarBtnPago.php?token=n229dc5c0f1e8b310f8ae15a0f67228d045932a0" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/20">
+          Cuota 30%
+        </a>
 
         <!-- Mobile menu button -->
         <button id="menu-btn" class="md:hidden p-2 text-gold-400" aria-label="Menú">
@@ -42,6 +45,7 @@ import Layout from '../layouts/Layout.astro';
         <a href="#nosotros" class="block text-gray-300 hover:text-gold-400 py-2">Nosotros</a>
         <a href="#contacto" class="block text-gray-300 hover:text-gold-400 py-2">Contacto</a>
         <a href="#contacto" class="block mt-2 text-center px-5 py-2.5 rounded-full bg-gold-500 text-black font-semibold">Reservar ahora</a>
+        <a href="#https://www.flow.cl/app/web/pagarBtnPago.php?token=n229dc5c0f1e8b310f8ae15a0f67228d045932a0" class="block mt-2 text-center px-5 py-2.5 rounded-full bg-gold-500 text-black font-semibold">Cuota 30%</a>
       </div>
     </div>
   </header>
@@ -212,6 +216,71 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </section>
 
+<!-- Image Slider - 7 imágenes sin texto -->
+  <section class="py-16 md:py-24 relative overflow-hidden bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-2">Galería</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">Nuestros viajes en imágenes</h2>
+        <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-6"></div>
+      </div>
+
+      <div class="relative">
+        <div id="image-slider" class="overflow-hidden rounded-2xl border border-gold-600/20 shadow-2xl">
+          <div id="image-slider-track" class="flex transition-transform duration-700 ease-out">
+            
+            <!-- Imagen 1 -->
+            <div class="min-w-full">
+              <img src="slider/1.jfif" alt="Chile 1" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="min-w-full">
+              <img src="slider/2.jfif" alt="Chile 2" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 3 -->
+            <div class="min-w-full">
+              <img src="slider/3.jfif" alt="Chile 3" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 4 -->
+            <div class="min-w-full">
+              <img src="slider/4.jfif" alt="Chile 4" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 5 -->
+            <div class="min-w-full">
+              <img src="slider/5.jfif" alt="Chile 5" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 6 -->
+            <div class="min-w-full">
+              <img src="slider/6.jfif" alt="Chile 6" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+            <!-- Imagen 7 -->
+            <div class="min-w-full">
+              <img src="slider/7.jfif" alt="Chile 7" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Flechas -->
+        <button id="img-prev" class="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur border border-gold-500/40 text-gold-400 hover:bg-gold-500/20 transition flex items-center justify-center z-10" aria-label="Anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="img-next" class="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur border border-gold-500/40 text-gold-400 hover:bg-gold-500/20 transition flex items-center justify-center z-10" aria-label="Siguiente">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Dots -->
+        <div id="img-dots" class="flex justify-center gap-2 mt-6"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Section -->
   <section id="servicios" class="py-20 md:py-28 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black"></div>
@@ -381,7 +450,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-gray-400">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
       </div>
 
-      <form class="space-y-5 bg-zinc-900/60 border border-gold-600/20 rounded-2xl p-6 sm:p-8">
+      <form action=https://formspree.io/f/xrpbpegd method=post class="space-y-5 bg-zinc-900/60 border border-gold-600/20 rounded-2xl p-6 sm:p-8">
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
             <label for="name" class="block text-sm text-gray-400 mb-1.5">Nombre</label>
@@ -520,5 +589,39 @@ import Layout from '../layouts/Layout.astro';
 
     // Auto play
     setInterval(() => goTo((current + 1) % totalSlides), 5000);
+
+    // Image Slider (7 imágenes)
+    const imgTrack = document.getElementById('image-slider-track');
+    const imgPrev = document.getElementById('img-prev');
+    const imgNext = document.getElementById('img-next');
+    const imgDotsContainer = document.getElementById('img-dots');
+    const totalImgSlides = 7;
+    let currentImg = 0;
+
+    for (let i = 0; i < totalImgSlides; i++) {
+      const dot = document.createElement('button');
+      dot.className = `w-2.5 h-2.5 rounded-full transition ${i === 0 ? 'bg-gold-400' : 'bg-zinc-600'}`;
+      dot.addEventListener('click', () => goToImg(i));
+      imgDotsContainer?.appendChild(dot);
+    }
+
+    function updateImgDots() {
+      imgDotsContainer?.querySelectorAll('button').forEach((dot, i) => {
+        dot.className = `w-2.5 h-2.5 rounded-full transition ${i === currentImg ? 'bg-gold-400' : 'bg-zinc-600'}`;
+      });
+    }
+
+    function goToImg(index) {
+      currentImg = index;
+      if (imgTrack) imgTrack.style.transform = `translateX(-${currentImg * 100}%)`;
+      updateImgDots();
+    }
+
+    imgPrev?.addEventListener('click', () => goToImg((currentImg - 1 + totalImgSlides) % totalImgSlides));
+    imgNext?.addEventListener('click', () => goToImg((currentImg + 1) % totalImgSlides));
+
+    // Autoplay cada 5 segundos
+    setInterval(() => goToImg((currentImg + 1) % totalImgSlides), 5000);
+
   </script>
 </Layout>
