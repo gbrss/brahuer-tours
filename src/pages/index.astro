@@ -52,21 +52,16 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <!-- Background gradient -->
     <div class="absolute inset-0 bg-gradient-to-b from-black via-brand-dark to-black"></div>
-    
-    <!-- Decorative elements -->
     <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gold-600/5 rounded-full blur-3xl"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <!-- Official Chilean flag emoji -->
       <div class="flex items-center justify-center gap-3 mb-6">
         <span class="text-3xl md:text-4xl">🇨🇱</span>
         <span class="text-gold-400/80 text-sm tracking-[0.3em] uppercase">Chile</span>
       </div>
 
-      <!-- Logo image -->
       <div class="mb-8 flex justify-center">
         <img 
           src="/logo.jpg" 
@@ -96,7 +91,6 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
 
-      <!-- Services icons preview -->
       <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
         <div class="flex flex-col items-center gap-2 group">
           <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
@@ -134,7 +128,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
       <svg class="w-6 h-6 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -142,81 +135,85 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Slider Section -->
-<section class="py-16 md:py-20 relative overflow-hidden bg-zinc-950">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-2">Destinos destacados</p>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">Descubre Chile con nosotros</h2>
-    </div>
+  <!-- Slider Destinos Destacados -->
+  <section class="py-16 md:py-20 relative overflow-hidden bg-zinc-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-gold-500 text-sm tracking-[0.3em] uppercase mb-2">Destinos destacados</p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white">Descubre Chile con nosotros</h2>
+      </div>
 
-    <div class="relative">
-      <div id="slider" class="overflow-hidden rounded-2xl border border-gold-600/20">
-        <div id="slider-track" class="flex transition-transform duration-500 ease-out">
+      <div class="relative">
+        <div id="slider" class="overflow-hidden rounded-2xl border border-gold-600/20">
+          <div id="slider-track" class="flex transition-transform duration-500 ease-out">
 
-          <!-- Slide 1: Nieve y Cordillera -->
-          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-            <div class="text-5xl mb-4">⛷️</div>
-            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Nieve & Cordillera de los Andes</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
-              Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset
-            </p>
+            <!-- Slide 1: Nieve -->
+            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('nieve')">
+              <div class="text-5xl mb-4">⛷️</div>
+              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Nieve & Cordillera de los Andes</h3>
+              <p class="text-gray-400 max-w-xl mx-auto">
+                Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset
+              </p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+            </div>
+
+            <!-- Slide 2: Viñas -->
+            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('vinas')">
+              <div class="text-5xl mb-4">🍷</div>
+              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Viñas & Experiencias Enológicas</h3>
+              <p class="text-gray-400 max-w-xl mx-auto">
+                Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao
+              </p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+            </div>
+
+            <!-- Slide 3: Costa -->
+            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('valparaiso')">
+              <div class="text-5xl mb-4">🌊</div>
+              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Costa, Valparaíso & Viña del Mar</h3>
+              <p class="text-gray-400 max-w-xl mx-auto">
+                Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca
+              </p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+            </div>
+
+            <!-- Slide 4: Cajón del Maipo -->
+            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('maipo')">
+              <div class="text-5xl mb-4">🏔️</div>
+              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Cajón del Maipo & Naturaleza</h3>
+              <p class="text-gray-400 max-w-xl mx-auto">
+                Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque
+              </p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+            </div>
+
+            <!-- Slide 5: Santiago -->
+            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('santiago')">
+              <div class="text-5xl mb-4">🌃</div>
+              <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Experiencias en Santiago</h3>
+              <p class="text-gray-400 max-w-xl mx-auto">
+                Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas
+              </p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+            </div>
+
           </div>
+        </div>
 
-          <!-- Slide 2: Viñas -->
-          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-            <div class="text-5xl mb-4">🍷</div>
-            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Viñas & Experiencias Enológicas</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
-              Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao
-            </p>
-          </div>
-
-          <!-- Slide 3: Costa y Valparaíso -->
-          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-            <div class="text-5xl mb-4">🌊</div>
-            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Costa, Valparaíso & Viña del Mar</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
-              Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca
-            </p>
-          </div>
-
-          <!-- Slide 4: Cajón del Maipo y Naturaleza -->
-          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-            <div class="text-5xl mb-4">🏔️</div>
-            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Cajón del Maipo & Naturaleza</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
-              Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque
-            </p>
-          </div>
-
-          <!-- Slide 5: Experiencias en Santiago -->
-          <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center">
-            <div class="text-5xl mb-4">🌃</div>
-            <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Experiencias en Santiago</h3>
-            <p class="text-gray-400 max-w-xl mx-auto">
-              Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas
-            </p>
-          </div>
-
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prev-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Anterior">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div id="dots" class="flex gap-2"></div>
+          <button id="next-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Siguiente">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
-
-      <!-- Controls -->
-      <div class="flex items-center justify-center gap-4 mt-6">
-        <button id="prev-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Anterior">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <div id="dots" class="flex gap-2"></div>
-        <button id="next-btn" class="w-10 h-10 rounded-full border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition flex items-center justify-center" aria-label="Siguiente">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Image Slider - 7 imágenes sin texto -->
+  <!-- Image Slider Galería -->
   <section class="py-16 md:py-24 relative overflow-hidden bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
@@ -228,86 +225,24 @@ import Layout from '../layouts/Layout.astro';
       <div class="relative">
         <div id="image-slider" class="overflow-hidden rounded-2xl border border-gold-600/20 shadow-2xl">
           <div id="image-slider-track" class="flex transition-transform duration-700 ease-out">
-            
-            <!-- Imagen 1 -->
-            <div class="min-w-full">
-              <img src="slider/1.jfif" alt="Chile 1" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 2 -->
-            <div class="min-w-full">
-              <img src="slider/2.jfif" alt="Chile 2" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 3 -->
-            <div class="min-w-full">
-              <img src="slider/3.jfif" alt="Chile 3" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 4 -->
-            <div class="min-w-full">
-              <img src="slider/4.jfif" alt="Chile 4" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 5 -->
-            <div class="min-w-full">
-              <img src="slider/5.jfif" alt="Chile 5" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 6 -->
-            <div class="min-w-full">
-              <img src="slider/6.jfif" alt="Chile 6" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 7 -->
-            <div class="min-w-full">
-              <img src="slider/7.jfif" alt="Chile 7" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 8 -->
-            <div class="min-w-full">
-              <img src="slider/8.jfif" alt="Chile 8" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 9 -->
-            <div class="min-w-full">
-              <img src="slider/9.jfif" alt="Chile 9" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 10 -->
-            <div class="min-w-full">
-              <img src="slider/10.jfif" alt="Chile 10" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 11 -->
-            <div class="min-w-full">
-              <img src="slider/11.jfif" alt="Chile 11" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 12 -->
-            <div class="min-w-full">
-              <img src="slider/12.jfif" alt="Chile 12" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 13 -->
-            <div class="min-w-full">
-              <img src="slider/13.jfif" alt="Chile 13" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 14 -->
-            <div class="min-w-full">
-              <img src="slider/14.jfif" alt="Chile 14" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
-            <!-- Imagen 15 -->
-            <div class="min-w-full">
-              <img src="slider/15.jfif" alt="Chile 15" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" />
-            </div>
-
+            <div class="min-w-full"><img src="slider/1.jfif" alt="Chile 1" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/2.jfif" alt="Chile 2" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/3.jfif" alt="Chile 3" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/4.jfif" alt="Chile 4" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/5.jfif" alt="Chile 5" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/6.jfif" alt="Chile 6" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/7.jfif" alt="Chile 7" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/8.jfif" alt="Chile 8" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/9.jfif" alt="Chile 9" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/10.jfif" alt="Chile 10" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/11.jfif" alt="Chile 11" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/12.jfif" alt="Chile 12" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/13.jfif" alt="Chile 13" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/14.jfif" alt="Chile 14" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
+            <div class="min-w-full"><img src="slider/15.jfif" alt="Chile 15" class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover" /></div>
           </div>
         </div>
 
-        <!-- Flechas -->
         <button id="img-prev" class="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/50 backdrop-blur border border-gold-500/40 text-gold-400 hover:bg-gold-500/20 transition flex items-center justify-center z-10" aria-label="Anterior">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
@@ -315,7 +250,6 @@ import Layout from '../layouts/Layout.astro';
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </button>
 
-        <!-- Dots -->
         <div id="img-dots" class="flex justify-center gap-2 mt-6"></div>
       </div>
     </div>
@@ -332,7 +266,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-        <!-- Excursiones -->
         <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
           <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
             <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -340,12 +273,9 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-white mb-3">Excursiones</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Tours guiados a los paisajes más impresionantes de Chile: desde el desierto de Atacama hasta la Patagonia.
-          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">Tours guiados a los paisajes más impresionantes de Chile: desde el desierto de Atacama hasta la Patagonia.</p>
         </div>
 
-        <!-- Traslados -->
         <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
           <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
             <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -353,12 +283,9 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-white mb-3">Traslados</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Servicio de transporte privado y corporativo con vehículos modernos y conductores profesionales.
-          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">Servicio de transporte privado y corporativo con vehículos modernos y conductores profesionales.</p>
         </div>
 
-        <!-- Destinos -->
         <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
           <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
             <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -367,12 +294,9 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-white mb-3">Destinos</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Conoce los mejores lugares de Chile con itinerarios personalizados adaptados a tus intereses.
-          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">Conoce los mejores lugares de Chile con itinerarios personalizados adaptados a tus intereses.</p>
         </div>
 
-        <!-- Experiencias -->
         <div class="group relative bg-zinc-900/50 border border-gold-600/20 rounded-2xl p-6 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-1">
           <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center mb-5 group-hover:bg-gold-500/20 transition">
             <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,9 +304,7 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-white mb-3">Experiencias</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Vivencias únicas: degustaciones, aventura, cultura y naturaleza en un solo viaje inolvidable.
-          </p>
+          <p class="text-gray-400 text-sm leading-relaxed">Vivencias únicas: degustaciones, aventura, cultura y naturaleza en un solo viaje inolvidable.</p>
         </div>
       </div>
     </div>
@@ -490,7 +412,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-gray-400">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
       </div>
 
-      <form action=https://formspree.io/f/xrpbpegd method=post class="space-y-5 bg-zinc-900/60 border border-gold-600/20 rounded-2xl p-6 sm:p-8">
+      <form action="https://formspree.io/f/xrpbpegd" method="POST" class="space-y-5 bg-zinc-900/60 border border-gold-600/20 rounded-2xl p-6 sm:p-8">
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
             <label for="name" class="block text-sm text-gray-400 mb-1.5">Nombre</label>
@@ -577,6 +499,45 @@ import Layout from '../layouts/Layout.astro';
     </svg>
   </a>
 
+  <!-- ==================== MODAL DESTINO ==================== -->
+  <div id="destino-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative bg-zinc-950 border border-gold-600/40 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
+      
+      <button id="cerrar-modal" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/20 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="relative">
+        <div id="modal-slider" class="overflow-hidden rounded-t-2xl">
+          <div id="modal-track" class="flex transition-transform duration-500"></div>
+        </div>
+        <button id="modal-prev" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 border border-gold-500/40 text-gold-400 flex items-center justify-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button id="modal-next" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 border border-gold-500/40 text-gold-400 flex items-center justify-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4">
+        <h3 id="modal-titulo" class="text-xl font-display font-bold text-gold-400"></h3>
+        <p id="modal-descripcion" class="text-gray-400 text-sm"></p>
+
+        <div class="rounded-xl overflow-hidden border border-gold-600/30 h-48">
+          <iframe id="modal-mapa" class="w-full h-full" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <a id="modal-whatsapp" href="#" target="_blank"
+           class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-[#25D366] text-white font-semibold text-base hover:scale-[1.02] transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
   <style>
     @keyframes pulse-slow {
       0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
@@ -596,15 +557,14 @@ import Layout from '../layouts/Layout.astro';
       link.addEventListener('click', () => menu.classList.add('hidden'));
     });
 
-    // Slider
+    // ===== Slider Destinos (5 slides) =====
     const track = document.getElementById('slider-track');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const dotsContainer = document.getElementById('dots');
-    const totalSlides = 4;
+    const totalSlides = 5;
     let current = 0;
 
-    // Create dots
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('button');
       dot.className = `w-2.5 h-2.5 rounded-full transition ${i === 0 ? 'bg-gold-400' : 'bg-zinc-600'}`;
@@ -626,11 +586,9 @@ import Layout from '../layouts/Layout.astro';
 
     prevBtn?.addEventListener('click', () => goTo((current - 1 + totalSlides) % totalSlides));
     nextBtn?.addEventListener('click', () => goTo((current + 1) % totalSlides));
+    setInterval(() => goTo((current + 1) % totalSlides), 6000);
 
-    // Auto play
-    setInterval(() => goTo((current + 1) % totalSlides), 5000);
-
-    // Image Slider (15 imágenes)
+    // ===== Image Slider (15 imágenes) =====
     const imgTrack = document.getElementById('image-slider-track');
     const imgPrev = document.getElementById('img-prev');
     const imgNext = document.getElementById('img-next');
@@ -659,9 +617,113 @@ import Layout from '../layouts/Layout.astro';
 
     imgPrev?.addEventListener('click', () => goToImg((currentImg - 1 + totalImgSlides) % totalImgSlides));
     imgNext?.addEventListener('click', () => goToImg((currentImg + 1) % totalImgSlides));
-
-    // Autoplay cada 5 segundos
     setInterval(() => goToImg((currentImg + 1) % totalImgSlides), 5000);
 
+    // ===== MODAL DESTINOS =====
+    const destinosData = {
+      nieve: {
+        titulo: "Nieve & Cordillera de los Andes",
+        descripcion: "Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset",
+        imagenes: [
+          "slider/1.jfif",
+          "slider/2.jfif",
+          "slider/3.jfif"
+        ],
+        mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5!2d-70.312!3d-33.352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c9b8b8b8b8b8%3A0x0!2sFarellones!5e0!3m2!1ses!2scl!4v1700000000000",
+        whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Nieve%20y%20Cordillera%20de%20los%20Andes"
+      },
+      vinas: {
+        titulo: "Viñas & Experiencias Enológicas",
+        descripcion: "Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao",
+        imagenes: [
+          "slider/4.jfif",
+          "slider/5.jfif",
+          "slider/6.jfif"
+        ],
+        mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331!2d-70.75!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVi%C3%B1a%20Concha%20y%20Toro!5e0!3m2!1ses!2scl!4v1700000000000",
+        whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Viñas%20y%20Experiencias%20Enológicas"
+      },
+      valparaiso: {
+        titulo: "Costa, Valparaíso & Viña del Mar",
+        descripcion: "Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca",
+        imagenes: [
+          "slider/7.jfif",
+          "slider/8.jfif",
+          "slider/9.jfif"
+        ],
+        mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344!2d-71.627!3d-33.047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0e6e6e6e6e6%3A0x0!2sValpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000",
+        whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Valpara%C3%ADso%20y%20Vi%C3%B1a%20del%20Mar"
+      },
+      maipo: {
+        titulo: "Cajón del Maipo & Naturaleza",
+        descripcion: "Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque",
+        imagenes: [
+          "slider/10.jfif",
+          "slider/11.jfif",
+          "slider/12.jfif"
+        ],
+        mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329!2d-70.15!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCaj%C3%B3n%20del%20Maipo!5e0!3m2!1ses!2scl!4v1700000000000",
+        whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Caj%C3%B3n%20del%20Maipo"
+      },
+      santiago: {
+        titulo: "Experiencias en Santiago",
+        descripcion: "Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas",
+        imagenes: [
+          "slider/13.jfif",
+          "slider/14.jfif",
+          "slider/15.jfif"
+        ],
+        mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330!2d-70.669!3d-33.448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a5a5a5a5a5%3A0x0!2sSantiago!5e0!3m2!1ses!2scl!4v1700000000000",
+        whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Experiencias%20en%20Santiago"
+      }
+    };
+
+    let currentModalSlide = 0;
+
+    window.abrirModal = function(id) {
+      const data = destinosData[id];
+      if (!data) return;
+
+      document.getElementById('modal-titulo').textContent = data.titulo;
+      document.getElementById('modal-descripcion').textContent = data.descripcion;
+      document.getElementById('modal-mapa').src = data.mapa;
+      document.getElementById('modal-whatsapp').href = data.whatsapp;
+
+      const trackModal = document.getElementById('modal-track');
+      trackModal.innerHTML = data.imagenes.map(src => `
+        <div class="min-w-full">
+          <img src="${src}" class="w-full h-52 object-cover" alt="">
+        </div>
+      `).join('');
+
+      currentModalSlide = 0;
+      trackModal.style.transform = 'translateX(0)';
+
+      const modal = document.getElementById('destino-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+
+    function cerrarModal() {
+      const modal = document.getElementById('destino-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('cerrar-modal')?.addEventListener('click', cerrarModal);
+    document.getElementById('destino-modal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'destino-modal') cerrarModal();
+    });
+
+    document.getElementById('modal-prev')?.addEventListener('click', () => {
+      currentModalSlide = (currentModalSlide - 1 + 3) % 3;
+      document.getElementById('modal-track').style.transform = `translateX(-${currentModalSlide * 100}%)`;
+    });
+    document.getElementById('modal-next')?.addEventListener('click', () => {
+      currentModalSlide = (currentModalSlide + 1) % 3;
+      document.getElementById('modal-track').style.transform = `translateX(-${currentModalSlide * 100}%)`;
+    });
   </script>
 </Layout>
