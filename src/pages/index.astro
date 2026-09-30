@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Polvo dorado que flota sobre el logo (posición, tamaño y tiempos variados)
 const particulas = Array.from({ length: 16 }, (_, i) => ({
   x: Math.round(((i * 37) % 92) + 4),
   size: 2 + ((i * 5) % 4),
@@ -34,7 +33,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
         <a href="https://www.flow.cl/app/web/pagarBtnPago.php?token=n229dc5c0f1e8b310f8ae15a0f67228d045932a0" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/20">
           Cuota 30%
         </a>
-        <!-- Mobile menu button -->
         <button id="menu-btn" class="md:hidden p-2 text-gold-400" aria-label="Menú">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -42,7 +40,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
         </button>
       </div>
     </nav>
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-gold-600/20">
       <div class="px-4 py-4 space-y-3">
         <a href="#servicios" class="block text-gray-300 hover:text-gold-400 py-2">Servicios</a>
@@ -83,22 +80,12 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
         <span class="text-white">BRA</span><span class="text-gold-400">H</span><span class="text-white">UER</span>
       </h1>
       <p class="text-xl sm:text-2xl md:text-3xl text-gold-500 font-display tracking-widest mb-4 scroll-reveal reveal-up">TOURS</p>
-      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-2 font-light scroll-reveal reveal-up">
-        Turismo y Transporte
-      </p>
-      <p class="text-gold-400/90 text-base sm:text-lg italic mb-8 font-display scroll-reveal reveal-up">
-        "Tu destino, nuestra ruta"
-      </p>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-2 font-light scroll-reveal reveal-up">Turismo y Transporte</p>
+      <p class="text-gold-400/90 text-base sm:text-lg italic mb-8 font-display scroll-reveal reveal-up">"Tu destino, nuestra ruta"</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 scroll-reveal reveal-up">
-        <a href="#servicios" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-xl shadow-gold-500/25">
-          Descubre nuestros servicios
-        </a>
-        <a href="#contacto" class="px-8 py-3.5 rounded-full border border-gold-500/50 text-gold-400 font-medium hover:bg-gold-500/10 transition">
-          Contáctanos
-        </a>
+        <a href="#servicios" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-xl shadow-gold-500/25">Descubre nuestros servicios</a>
+        <a href="#contacto" class="px-8 py-3.5 rounded-full border border-gold-500/50 text-gold-400 font-medium hover:bg-gold-500/10 transition">Contáctanos</a>
       </div>
-      
-      <!-- Iconos con stagger aleatorio -->
       <div class="relative mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto stagger-children">
         <div class="flex flex-col items-center gap-2 group scroll-reveal-random">
           <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
@@ -148,9 +135,8 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
       <div class="relative scroll-reveal reveal-scale">
         <div id="slider" class="overflow-hidden rounded-2xl border border-gold-600/20">
           <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-            <!-- Slide 1: Nieve -->
             <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('nieve')">
-              <img src="slider/8.jfif" alt="Nieve y Cordillera de los Andes" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="/slider/8.jfif" alt="Nieve y Cordillera de los Andes" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               <div class="relative w-full">
                 <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Nieve & Cordillera de los Andes</h3>
@@ -158,19 +144,17 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
                 <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
               </div>
             </div>
-            <!-- Slide 2: Viñas -->
             <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('vinas')">
-              <img src="slider/4.jfif" alt="Viñas y experiencias enológicas" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="/slider/4.jfif" alt="Viñas y experiencias enológicas" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               <div class="relative w-full">
                 <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Viñas & Experiencias Enológicas</h3>
-                <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í</p>
+                <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá'í</p>
                 <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
               </div>
             </div>
-            <!-- Slide 3: Costa -->
             <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('valparaiso')">
-              <img src="slider/11.jfif" alt="Costa, Valparaíso y Viña del Mar" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="/slider/11.jfif" alt="Costa, Valparaíso y Viña del Mar" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               <div class="relative w-full">
                 <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Costa, Valparaíso & Viña del Mar</h3>
@@ -178,9 +162,8 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
                 <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
               </div>
             </div>
-            <!-- Slide 4: Cajón del Maipo -->
             <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('maipo')">
-              <img src="slider/16.webp" alt="Cajón del Maipo y naturaleza" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="/slider/16.webp" alt="Cajón del Maipo y naturaleza" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               <div class="relative w-full">
                 <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Cajón del Maipo & Naturaleza</h3>
@@ -188,9 +171,8 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
                 <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
               </div>
             </div>
-            <!-- Slide 5: Santiago -->
             <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('santiago')">
-              <img src="slider/19.jpg" alt="Experiencias en Santiago" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <img src="/slider/19.jpg" alt="Experiencias en Santiago" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
               <div class="relative w-full">
                 <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Experiencias en Santiago</h3>
@@ -245,7 +227,7 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     </div>
   </section>
 
-  <!-- Image Slider -->
+  <!-- Image Slider - CORREGIDO con slash inicial -->
   <section class="py-16 md:py-20 relative overflow-hidden bg-zinc-950 scroll-blur-target">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10 scroll-reveal reveal-up">
@@ -257,7 +239,7 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
           <div id="image-slider-track" class="flex transition-transform duration-500 ease-out">
             {Array.from({ length: 15 }, (_, i) => (
               <div class="min-w-full bg-black">
-                <img src={`vehiculos/${i + 1}.jpg`} alt={`Vehículo ${i + 1}`} loading={i < 2 ? 'eager' : 'lazy'} class="w-full h-64 sm:h-80 md:h-96 object-cover" />
+                <img src={`/vehiculos/${i + 1}.jpg`} alt={`Vehículo ${i + 1}`} loading={i < 2 ? 'eager' : 'lazy'} class="w-full h-64 sm:h-80 md:h-96 object-cover" />
               </div>
             ))}
           </div>
@@ -273,7 +255,7 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     </div>
   </section>
 
-  <!-- Nosotros -->
+  <!-- Nosotros - CORREGIDO con slash inicial -->
   <section id="nosotros" class="py-16 md:py-20 relative overflow-hidden scroll-blur-target">
     <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -305,10 +287,10 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
         <div class="relative scroll-reveal reveal-right">
           <div class="absolute -inset-4 bg-gradient-to-r from-gold-500/20 to-gold-600/10 rounded-2xl blur-xl"></div>
           <div class="relative grid grid-cols-2 gap-4">
-            <img src="nosotros/1.jpg" alt="Brahuer Tours" class="rounded-xl w-full h-48 md:h-56 object-cover" loading="lazy" />
-            <img src="nosotros/2.jpg" alt="Servicio premium" class="rounded-xl w-full h-48 md:h-56 object-cover mt-8" loading="lazy" />
-            <img src="nosotros/3.jpg" alt="Destinos Chile" class="rounded-xl w-full h-48 md:h-56 object-cover" loading="lazy" />
-            <img src="nosotros/4.jpg" alt="Transporte seguro" class="rounded-xl w-full h-48 md:h-56 object-cover mt-8" loading="lazy" />
+            <img src="/nosotros/1.jpg" alt="Brahuer Tours" class="rounded-xl w-full h-48 md:h-56 object-cover" loading="lazy" />
+            <img src="/nosotros/2.jpg" alt="Servicio premium" class="rounded-xl w-full h-48 md:h-56 object-cover mt-8" loading="lazy" />
+            <img src="/nosotros/3.jpg" alt="Destinos Chile" class="rounded-xl w-full h-48 md:h-56 object-cover" loading="lazy" />
+            <img src="/nosotros/4.jpg" alt="Transporte seguro" class="rounded-xl w-full h-48 md:h-56 object-cover mt-8" loading="lazy" />
           </div>
         </div>
       </div>
@@ -343,9 +325,7 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
             <label class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
             <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-black/50 border border-gold-600/20 text-white placeholder-gray-500 focus:border-gold-500/50 focus:ring-2 focus:ring-gold-500/20 outline-none transition resize-none" placeholder="Cuéntanos sobre tu viaje..."></textarea>
           </div>
-          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/25">
-            Enviar mensaje
-          </button>
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold text-base hover:from-gold-400 hover:to-gold-500 transition shadow-lg shadow-gold-500/25">Enviar mensaje</button>
         </form>
         <div class="mt-8 pt-6 border-t border-gold-600/20 grid md:grid-cols-3 gap-4 text-center stagger-children">
           <div class="scroll-reveal-random">
@@ -368,8 +348,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
           </div>
         </div>
       </div>
-      
-      <!-- Redes Sociales -->
       <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 stagger-children">
         <a href="https://www.instagram.com/brahuertransportes" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 w-full sm:w-auto px-8 py-4 rounded-2xl bg-zinc-900/80 border border-gold-600/20 hover:border-pink-500/50 hover:bg-zinc-900 transition-all duration-300 scroll-reveal-random">
           <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
@@ -404,11 +382,9 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
           </p>
           <p class="text-gray-500 text-sm mt-1">Turismo y Transporte · Chile</p>
         </div>
-        <p class="text-gold-400/80 text-sm italic font-display scroll-reveal reveal-up">
-          "Tu destino, nuestra ruta"
-        </p>
+        <p class="text-gold-400/80 text-sm italic font-display scroll-reveal reveal-up">"Tu destino, nuestra ruta"</p>
         <div class="flex items-center gap-4 scroll-reveal reveal-right">
-          <span class="text-2xl">🇨🇱</span>
+          <span class="text-2xl">🇱</span>
           <span class="text-gray-500 text-xs">Hecho en Chile</span>
         </div>
       </div>
@@ -425,13 +401,12 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     </svg>
   </a>
 
-  <!-- ==================== MODAL DESTINO (FULLSCREEN) ==================== -->
+  <!-- Modal Destino Fullscreen -->
   <div id="destino-modal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md">
     <div class="relative w-full h-full flex flex-col">
       <button id="cerrar-modal" class="absolute top-4 right-4 z-50 w-12 h-12 rounded-full bg-black/80 border-2 border-gold-500/50 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition shadow-lg">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      
       <div class="relative flex-1">
         <div id="modal-slider" class="overflow-hidden w-full h-full">
           <div id="modal-track" class="flex transition-transform duration-500 ease-out h-full"></div>
@@ -444,7 +419,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </button>
       </div>
-      
       <div class="flex-1 bg-zinc-950 border-t-2 border-gold-600/30 flex flex-col">
         <div class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
           <h3 id="modal-titulo" class="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gold-400 mb-3"></h3>
@@ -464,7 +438,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
   </div>
 
   <style>
-    /* ===== Animaciones Scroll Reveal con Blur ===== */
     .scroll-reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -474,76 +447,56 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
                   filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform, filter;
     }
-
     .scroll-reveal.reveal-left { transform: translateX(-40px); }
     .scroll-reveal.reveal-right { transform: translateX(40px); }
     .scroll-reveal.reveal-scale { transform: scale(0.95); }
-
     .scroll-reveal.is-visible {
       opacity: 1;
       transform: translateY(0) translateX(0) scale(1);
       filter: blur(0px);
     }
+    .scroll-blur-target { transition: filter 0.3s ease-out; }
+    body.is-scrolling .scroll-blur-target { filter: blur(2px); }
 
-    /* Efecto blur mínimo global al hacer scroll */
-    .scroll-blur-target {
-      transition: filter 0.3s ease-out;
-    }
-    body.is-scrolling .scroll-blur-target {
-      filter: blur(2px);
-    }
-
-    /* ===== Logo con vida ===== */
     @keyframes logoFloat { 0%, 100% { transform: translateY(0) translateZ(0); } 50% { transform: translateY(-8px) translateZ(0); } }
     @keyframes logoBreath { from { transform: scale(1) translateZ(0); } to { transform: scale(1.06) translateZ(0); } }
     @keyframes logoGlow { 0%, 100% { opacity: 0.25; transform: scale(0.97); } 50% { opacity: 0.75; transform: scale(1.03); } }
     @keyframes logoShine { 0%, 55% { transform: translateX(-130%) skewX(-18deg); } 100% { transform: translateX(130%) skewX(-18deg); } }
     @keyframes logoDust { 0% { transform: translate3d(0, 0, 0) scale(0.6); opacity: 0; } 15% { opacity: 0.9; } 70% { opacity: 0.7; } 100% { transform: translate3d(var(--w), -70vh, 0) scale(1); opacity: 0; } }
-    
     .logo-float { animation: logoFloat 6s ease-in-out infinite; will-change: transform; }
     .logo-glow { animation: logoGlow 4s ease-in-out infinite; will-change: opacity, transform; }
     .logo-img { animation: logoBreath 10s ease-in-out infinite alternate; will-change: transform; backface-visibility: hidden; }
     .logo-shine { width: 45%; background: linear-gradient(100deg, transparent 0%, rgba(255, 236, 170, 0.0) 20%, rgba(255, 240, 190, 0.95) 50%, rgba(255, 236, 170, 0.0) 80%, transparent 100%); mix-blend-mode: overlay; animation: logoShine 5.5s ease-in-out infinite; will-change: transform; }
     .logo-dust { position: absolute; left: var(--x); bottom: -8px; width: var(--s); height: var(--s); border-radius: 9999px; background: radial-gradient(circle, #fff3b0 0%, #facc15 55%, rgba(250, 204, 21, 0) 100%); box-shadow: 0 0 8px 2px rgba(250, 204, 21, 0.55); opacity: 0; animation: logoDust var(--t) linear var(--d) infinite; will-change: transform, opacity; }
-    
     @keyframes zoomIn { from { transform: scale(1) translateZ(0); } to { transform: scale(1.18) translateZ(0); } }
     .slide-img { transform: scale(1) translateZ(0); will-change: transform; backface-visibility: hidden; }
     .slide-active .slide-img { animation: zoomIn 7s ease-out forwards; }
-    
     @keyframes pulse-slow { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); } }
     .animate-pulse-slow { animation: pulse-slow 2.5s infinite; }
   </style>
 
   <script>
-    // ===== 1. SISTEMA DE ANIMACIONES AL SCROLL (Intersection Observer) =====
     document.addEventListener('DOMContentLoaded', () => {
-      // Observador para revelar elementos con blur y movimiento
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target); // Solo animar una vez para mejor rendimiento
+            revealObserver.unobserve(entry.target);
           }
         });
       }, { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.1 });
 
       document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
 
-      // Asignar animaciones aleatorias y delays escalonados a elementos con clase 'scroll-reveal-random'
       const directions = ['reveal-up', 'reveal-left', 'reveal-right', 'reveal-scale'];
       document.querySelectorAll('.scroll-reveal-random').forEach((el, index) => {
-        // Elegir dirección aleatoria
         const randomDir = directions[Math.floor(Math.random() * directions.length)];
         el.classList.add(randomDir);
-        
-        // Delay escalonado aleatorio entre 0ms y 400ms para efecto orgánico
         const randomDelay = Math.floor(Math.random() * 400);
         el.style.transitionDelay = `${randomDelay}ms`;
-        
         revealObserver.observe(el);
       });
 
-      // Stagger automático para hijos de contenedores con clase 'stagger-children'
       document.querySelectorAll('.stagger-children').forEach(container => {
         const children = container.querySelectorAll('.scroll-reveal, .scroll-reveal-random');
         children.forEach((child, index) => {
@@ -552,10 +505,8 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
       });
     });
 
-    // ===== 2. EFECTO BLUR MÍNIMO GLOBAL AL HACER SCROLL =====
     let scrollTimeout;
     let isScrolling = false;
-    
     window.addEventListener('scroll', () => {
       if (!isScrolling) {
         document.body.classList.add('is-scrolling');
@@ -565,10 +516,9 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
       scrollTimeout = setTimeout(() => {
         document.body.classList.remove('is-scrolling');
         isScrolling = false;
-      }, 150); // Se quita el blur 150ms después de dejar de hacer scroll
+      }, 150);
     }, { passive: true });
 
-    // ===== 3. LÓGICA EXISTENTE (Menú, Sliders, Modal) =====
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
@@ -576,7 +526,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
       link.addEventListener('click', () => menu.classList.add('hidden'));
     });
 
-    // Slider Destinos
     const track = document.getElementById('slider-track');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
@@ -614,7 +563,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     nextBtn?.addEventListener('click', () => goTo((current + 1) % totalSlides));
     setInterval(() => goTo((current + 1) % totalSlides), 6000);
 
-    // Image Slider
     const imgTrack = document.getElementById('image-slider-track');
     const imgPrev = document.getElementById('img-prev');
     const imgNext = document.getElementById('img-next');
@@ -645,40 +593,39 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     imgNext?.addEventListener('click', () => goToImg((currentImg + 1) % totalImgSlides));
     setInterval(() => goToImg((currentImg + 1) % totalImgSlides), 5000);
 
-    // Modal Destinos
     const destinosData = {
       nieve: {
         titulo: "Nieve & Cordillera de los Andes",
         descripcion: "Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset",
-        imagenes: ["slider/8.jfif", "slider/9.jfif", "slider/14.jfif", "destinos/nieve/4.jpg", "destinos/nieve/5.jpg", "destinos/nieve/6.jpg", "destinos/nieve/7.jpg", "destinos/nieve/8.jpg", "destinos/nieve/9.jpg", "destinos/nieve/10.jpg"],
+        imagenes: ["/slider/8.jfif", "/slider/9.jfif", "/slider/14.jfif", "/destinos/nieve/4.jpg", "/destinos/nieve/5.jpg", "/destinos/nieve/6.jpg", "/destinos/nieve/7.jpg", "/destinos/nieve/8.jpg", "/destinos/nieve/9.jpg", "/destinos/nieve/10.jpg"],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5!2d-70.312!3d-33.352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c9b8b8b8b8b8%3A0x0!2sFarellones!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Nieve%20y%20Cordillera%20de%20los%20Andes"
       },
       vinas: {
         titulo: "Viñas & Experiencias Enológicas",
-        descripcion: "Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao",
-        imagenes: ["slider/4.jfif", "slider/6.jfif", "slider/7.jfif", "destinos/vinas/4.jpg", "destinos/vinas/5.jpg", "destinos/vinas/6.jpg", "destinos/vinas/7.jpg", "destinos/vinas/8.jpg", "destinos/vinas/9.jpg", "destinos/vinas/10.jpg"],
+        descripcion: "Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá'í · Undurraga + Parque Tricao",
+        imagenes: ["/slider/4.jfif", "/slider/6.jfif", "/slider/7.jfif", "/destinos/vinas/4.jpg", "/destinos/vinas/5.jpg", "/destinos/vinas/6.jpg", "/destinos/vinas/7.jpg", "/destinos/vinas/8.jpg", "/destinos/vinas/9.jpg", "/destinos/vinas/10.jpg"],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331!2d-70.75!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVi%C3%B1a%20Concha%20y%20Toro!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Viñas%20y%20Experiencias%20Enológicas"
       },
       valparaiso: {
         titulo: "Costa, Valparaíso & Viña del Mar",
         descripcion: "Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca",
-        imagenes: ["slider/11.jfif", "slider/12.jfif", "slider/13.jfif", "destinos/valparaiso/4.jpg", "destinos/valparaiso/5.jpg", "destinos/valparaiso/6.jpg", "destinos/valparaiso/7.jpg", "destinos/valparaiso/8.jpg", "destinos/valparaiso/9.jpg", "destinos/valparaiso/10.jpg"],
+        imagenes: ["/slider/11.jfif", "/slider/12.jfif", "/slider/13.jfif", "/destinos/valparaiso/4.jpg", "/destinos/valparaiso/5.jpg", "/destinos/valparaiso/6.jpg", "/destinos/valparaiso/7.jpg", "/destinos/valparaiso/8.jpg", "/destinos/valparaiso/9.jpg", "/destinos/valparaiso/10.jpg"],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344!2d-71.627!3d-33.047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0e6e6e6e6e6%3A0x0!2sValpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Valpara%C3%ADso%20y%20Vi%C3%B1a%20del%20Mar"
       },
       maipo: {
         titulo: "Cajón del Maipo & Naturaleza",
         descripcion: "Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque",
-        imagenes: ["slider/16.webp", "slider/17.jpg", "slider/18.jpg", "destinos/maipo/4.jpg", "destinos/maipo/5.jpg", "destinos/maipo/6.jpg", "destinos/maipo/7.jpg", "destinos/maipo/8.jpg", "destinos/maipo/9.jpg", "destinos/maipo/10.jpg"],
+        imagenes: ["/slider/16.webp", "/slider/17.jpg", "/slider/18.jpg", "/destinos/maipo/4.jpg", "/destinos/maipo/5.jpg", "/destinos/maipo/6.jpg", "/destinos/maipo/7.jpg", "/destinos/maipo/8.jpg", "/destinos/maipo/9.jpg", "/destinos/maipo/10.jpg"],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329!2d-70.15!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCaj%C3%B3n%20del%20Maipo!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Caj%C3%B3n%20del%20Maipo"
       },
       santiago: {
         titulo: "Experiencias en Santiago",
         descripcion: "Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas",
-        imagenes: ["slider/19.jpg", "slider/20.webp", "slider/21.jpg", "destinos/santiago/4.jpg", "destinos/santiago/5.jpg", "destinos/santiago/6.jpg", "destinos/santiago/7.jpg", "destinos/santiago/8.jpg", "destinos/santiago/9.jpg", "destinos/santiago/10.jpg"],
+        imagenes: ["/slider/19.jpg", "/slider/20.webp", "/slider/21.jpg", "/destinos/santiago/4.jpg", "/destinos/santiago/5.jpg", "/destinos/santiago/6.jpg", "/destinos/santiago/7.jpg", "/destinos/santiago/8.jpg", "/destinos/santiago/9.jpg", "/destinos/santiago/10.jpg"],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330!2d-70.669!3d-33.448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a5a5a5a5a5%3A0x0!2sSantiago!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Experiencias%20en%20Santiago"
       }
@@ -739,7 +686,6 @@ const particulas = Array.from({ length: 16 }, (_, i) => ({
     document.getElementById('modal-prev')?.addEventListener('click', () => modalGo(currentModalSlide - 1));
     document.getElementById('modal-next')?.addEventListener('click', () => modalGo(currentModalSlide + 1));
 
-    // Swipe táctil
     function enableSwipe(el, onPrev, onNext) {
       if (!el) return;
       el.style.touchAction = 'pan-y';
