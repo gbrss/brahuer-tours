@@ -58,7 +58,7 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="flex items-center justify-center gap-3 mb-6">
-        <span class="text-3xl md:text-4xl">🇨🇱</span>
+        <span class="text-3xl md:text-4xl">??</span>
         <span class="text-gold-400/80 text-sm tracking-[0.3em] uppercase">Chile</span>
       </div>
 
@@ -148,53 +148,68 @@ import Layout from '../layouts/Layout.astro';
           <div id="slider-track" class="flex transition-transform duration-500 ease-out">
 
             <!-- Slide 1: Nieve -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('nieve')">
-              <div class="text-5xl mb-4">⛷️</div>
+            <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('nieve')">
+              <img src="slider/8.jfif" alt="Nieve y Cordillera de los Andes" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="relative w-full">
               <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Nieve & Cordillera de los Andes</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">
+              <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">
                 Parque de Nieve Farellones · Valle Nevado · El Colorado · Andes Panorámico · Portillo & Laguna del Inca · Farellones Sunset
               </p>
-              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa ?</p>
+              </div>
             </div>
 
             <!-- Slide 2: Viñas -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('vinas')">
-              <div class="text-5xl mb-4">🍷</div>
+            <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('vinas')">
+              <img src="slider/4.jfif" alt="Viñas y experiencias enológicas" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="relative w-full">
               <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Viñas & Experiencias Enológicas</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">
-                Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao
+              <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">
+                Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá?í · Undurraga + Parque Tricao
               </p>
-              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa ?</p>
+              </div>
             </div>
 
             <!-- Slide 3: Costa -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('valparaiso')">
-              <div class="text-5xl mb-4">🌊</div>
+            <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('valparaiso')">
+              <img src="slider/11.jfif" alt="Costa, Valparaíso y Viña del Mar" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="relative w-full">
               <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Costa, Valparaíso & Viña del Mar</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">
+              <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">
                 Valparaíso & Viña del Mar Full Colors · Vino, Museo Neruda, Valparaíso y Viña del Mar · Isla Negra, Algarrobo & Valle Casablanca
               </p>
-              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa ?</p>
+              </div>
             </div>
 
             <!-- Slide 4: Cajón del Maipo -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('maipo')">
-              <div class="text-5xl mb-4">🏔️</div>
+            <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('maipo')">
+              <img src="slider/16.webp" alt="Cajón del Maipo y naturaleza" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="relative w-full">
               <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Cajón del Maipo & Naturaleza</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">
+              <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">
                 Laguna Escondida & Casa Chocolate · Lodge El Morado · Embalse El Yeso · Parque Safari · BuinZoo BioParque
               </p>
-              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa ?</p>
+              </div>
             </div>
 
             <!-- Slide 5: Santiago -->
-            <div class="min-w-full px-6 py-12 md:py-16 bg-gradient-to-br from-zinc-900 to-black text-center cursor-pointer hover:bg-zinc-800/50 transition" onclick="abrirModal('santiago')">
-              <div class="text-5xl mb-4">🌃</div>
+            <div class="group relative min-w-full overflow-hidden px-6 py-10 md:py-14 min-h-[440px] md:min-h-[520px] flex items-end justify-center bg-black text-center cursor-pointer" onclick="abrirModal('santiago')">
+              <img src="slider/19.jpg" alt="Experiencias en Santiago" loading="lazy" class="slide-img absolute inset-0 w-full h-full object-cover opacity-80" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+              <div class="relative w-full">
               <h3 class="text-2xl font-display font-bold text-gold-400 mb-3">Experiencias en Santiago</h3>
-              <p class="text-gray-400 max-w-xl mx-auto">
+              <p class="text-gray-100 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.9)]">
                 Roof & Night (experiencia nocturna) · Campanarios de la Catedral Metropolitana · Amor & Pastas
               </p>
-              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa →</p>
+              <p class="text-gold-500 text-sm mt-4">Toca para ver fotos y mapa ?</p>
+              </div>
             </div>
 
           </div>
@@ -359,7 +374,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="relative">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-gold-600/30 bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center">
             <div class="text-center p-8">
-              <div class="text-6xl mb-4">🇨🇱</div>
+              <div class="text-6xl mb-4">??</div>
               <p class="text-gold-400 font-display text-xl">Chile de norte a sur</p>
               <p class="text-gray-500 text-sm mt-2">Atacama · Santiago · Valparaíso · Patagonia</p>
             </div>
@@ -395,7 +410,7 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-sm text-gray-500 mt-1">Disponibilidad</p>
         </div>
         <div>
-          <p class="text-3xl font-display font-bold text-gold-400">★</p>
+          <p class="text-3xl font-display font-bold text-gold-400">?</p>
           <p class="text-sm text-gray-500 mt-1">Experiencia premium</p>
         </div>
       </div>
@@ -528,7 +543,7 @@ import Layout from '../layouts/Layout.astro';
         </p>
 
         <div class="flex items-center gap-4">
-          <span class="text-2xl">🇨🇱</span>
+          <span class="text-2xl">??</span>
           <span class="text-gray-500 text-xs">Hecho en Chile</span>
         </div>
       </div>
@@ -592,6 +607,15 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <style>
+    @keyframes zoomIn {
+      from { transform: scale(1); }
+      to { transform: scale(1.18); }
+    }
+    .slide-img { transform: scale(1); will-change: transform; }
+    .slide-active .slide-img { animation: zoomIn 7s ease-out forwards; }
+    @media (prefers-reduced-motion: reduce) {
+      .slide-active .slide-img { animation: none; }
+    }
     @keyframes pulse-slow {
       0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
       50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
@@ -631,11 +655,18 @@ import Layout from '../layouts/Layout.astro';
       });
     }
 
+    function updateActiveSlide() {
+      if (!track) return;
+      Array.from(track.children).forEach((el, i) => el.classList.toggle('slide-active', i === current));
+    }
+
     function goTo(index) {
       current = index;
       if (track) track.style.transform = `translateX(-${current * 100}%)`;
       updateDots();
+      updateActiveSlide();
     }
+    updateActiveSlide();
 
     prevBtn?.addEventListener('click', () => goTo((current - 1 + totalSlides) % totalSlides));
     nextBtn?.addEventListener('click', () => goTo((current + 1) % totalSlides));
@@ -687,7 +718,7 @@ import Layout from '../layouts/Layout.astro';
       },
       vinas: {
         titulo: "Viñas & Experiencias Enológicas",
-        descripcion: "Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá’í · Undurraga + Parque Tricao",
+        descripcion: "Viña Santa Carolina · Concha y Toro · Santa Rita · Cousiño Macul + Templo Bahá?í · Undurraga + Parque Tricao",
         imagenes: [
           "slider/4.jfif",
           "slider/6.jfif",
