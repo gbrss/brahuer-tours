@@ -569,7 +569,7 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ==================== MODAL DESTINO ==================== -->
   <div id="destino-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-    <div class="relative bg-zinc-950 border border-gold-600/40 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
+    <div class="relative bg-zinc-950 border border-gold-600/40 rounded-2xl w-full max-w-lg md:max-w-2xl max-h-[92vh] overflow-y-auto shadow-2xl">
       
       <button id="cerrar-modal" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/20 transition">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -579,6 +579,7 @@ import Layout from '../layouts/Layout.astro';
         <div id="modal-slider" class="overflow-hidden rounded-t-2xl">
           <div id="modal-track" class="flex transition-transform duration-500"></div>
         </div>
+        <div id="modal-counter" class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-black/60 border border-gold-500/40 text-gold-400 text-xs tracking-wider"></div>
         <button id="modal-prev" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 border border-gold-500/40 text-gold-400 flex items-center justify-center">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
@@ -711,7 +712,14 @@ import Layout from '../layouts/Layout.astro';
         imagenes: [
           "slider/8.jfif",
           "slider/9.jfif",
-          "slider/14.jfif"
+          "slider/14.jfif",
+          "destinos/nieve/4.jpg",
+          "destinos/nieve/5.jpg",
+          "destinos/nieve/6.jpg",
+          "destinos/nieve/7.jpg",
+          "destinos/nieve/8.jpg",
+          "destinos/nieve/9.jpg",
+          "destinos/nieve/10.jpg"
         ],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5!2d-70.312!3d-33.352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c9b8b8b8b8b8%3A0x0!2sFarellones!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Nieve%20y%20Cordillera%20de%20los%20Andes"
@@ -722,7 +730,14 @@ import Layout from '../layouts/Layout.astro';
         imagenes: [
           "slider/4.jfif",
           "slider/6.jfif",
-          "slider/7.jfif"
+          "slider/7.jfif",
+          "destinos/vinas/4.jpg",
+          "destinos/vinas/5.jpg",
+          "destinos/vinas/6.jpg",
+          "destinos/vinas/7.jpg",
+          "destinos/vinas/8.jpg",
+          "destinos/vinas/9.jpg",
+          "destinos/vinas/10.jpg"
         ],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331!2d-70.75!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sVi%C3%B1a%20Concha%20y%20Toro!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Viñas%20y%20Experiencias%20Enológicas"
@@ -733,7 +748,14 @@ import Layout from '../layouts/Layout.astro';
         imagenes: [
           "slider/11.jfif",
           "slider/12.jfif",
-          "slider/13.jfif"
+          "slider/13.jfif",
+          "destinos/valparaiso/4.jpg",
+          "destinos/valparaiso/5.jpg",
+          "destinos/valparaiso/6.jpg",
+          "destinos/valparaiso/7.jpg",
+          "destinos/valparaiso/8.jpg",
+          "destinos/valparaiso/9.jpg",
+          "destinos/valparaiso/10.jpg"
         ],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344!2d-71.627!3d-33.047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0e6e6e6e6e6%3A0x0!2sValpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Valpara%C3%ADso%20y%20Vi%C3%B1a%20del%20Mar"
@@ -744,7 +766,14 @@ import Layout from '../layouts/Layout.astro';
         imagenes: [
           "slider/16.webp",
           "slider/17.jpg",
-          "slider/18.jpg"
+          "slider/18.jpg",
+          "destinos/maipo/4.jpg",
+          "destinos/maipo/5.jpg",
+          "destinos/maipo/6.jpg",
+          "destinos/maipo/7.jpg",
+          "destinos/maipo/8.jpg",
+          "destinos/maipo/9.jpg",
+          "destinos/maipo/10.jpg"
         ],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329!2d-70.15!3d-33.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCaj%C3%B3n%20del%20Maipo!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Caj%C3%B3n%20del%20Maipo"
@@ -755,7 +784,14 @@ import Layout from '../layouts/Layout.astro';
         imagenes: [
           "slider/19.jpg",
           "slider/20.webp",
-          "slider/21.jpg"
+          "slider/21.jpg",
+          "destinos/santiago/4.jpg",
+          "destinos/santiago/5.jpg",
+          "destinos/santiago/6.jpg",
+          "destinos/santiago/7.jpg",
+          "destinos/santiago/8.jpg",
+          "destinos/santiago/9.jpg",
+          "destinos/santiago/10.jpg"
         ],
         mapa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330!2d-70.669!3d-33.448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a5a5a5a5a5%3A0x0!2sSantiago!5e0!3m2!1ses!2scl!4v1700000000000",
         whatsapp: "https://wa.me/56953068872?text=Hola%20Brahuer%20Tours%2C%20quiero%20información%20sobre%20Experiencias%20en%20Santiago"
@@ -774,14 +810,21 @@ import Layout from '../layouts/Layout.astro';
       document.getElementById('modal-whatsapp').href = data.whatsapp;
 
       const trackModal = document.getElementById('modal-track');
-      trackModal.innerHTML = data.imagenes.map(src => `
-        <div class="min-w-full">
-          <img src="${src}" class="w-full h-52 object-cover" alt="">
+      trackModal.innerHTML = data.imagenes.map((src, i) => `
+        <div class="min-w-full bg-black">
+          <img src="${src}" class="w-full h-72 sm:h-[26rem] md:h-[30rem] object-cover" alt="${data.titulo} ${i + 1}" loading="${i < 2 ? 'eager' : 'lazy'}">
         </div>
       `).join('');
 
-      currentModalSlide = 0;
-      trackModal.style.transform = 'translateX(0)';
+      // Si alguna foto aún no existe en /public, se omite sin romper el modal
+      trackModal.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', () => {
+          img.parentElement.remove();
+          modalGo(Math.min(currentModalSlide, trackModal.children.length - 1));
+        });
+      });
+
+      modalGo(0);
 
       const modal = document.getElementById('destino-modal');
       modal.classList.remove('hidden');
@@ -801,13 +844,17 @@ import Layout from '../layouts/Layout.astro';
       if (e.target.id === 'destino-modal') cerrarModal();
     });
 
-    document.getElementById('modal-prev')?.addEventListener('click', () => {
-      currentModalSlide = (currentModalSlide - 1 + 3) % 3;
-      document.getElementById('modal-track').style.transform = `translateX(-${currentModalSlide * 100}%)`;
-    });
-    document.getElementById('modal-next')?.addEventListener('click', () => {
-      currentModalSlide = (currentModalSlide + 1) % 3;
-      document.getElementById('modal-track').style.transform = `translateX(-${currentModalSlide * 100}%)`;
-    });
+    function modalGo(index) {
+      const t = document.getElementById('modal-track');
+      const total = t.children.length;
+      if (!total) return;
+      currentModalSlide = (index + total) % total;
+      t.style.transform = `translateX(-${currentModalSlide * 100}%)`;
+      const c = document.getElementById('modal-counter');
+      if (c) c.textContent = `${currentModalSlide + 1} / ${total}`;
+    }
+
+    document.getElementById('modal-prev')?.addEventListener('click', () => modalGo(currentModalSlide - 1));
+    document.getElementById('modal-next')?.addEventListener('click', () => modalGo(currentModalSlide + 1));
   </script>
 </Layout>
