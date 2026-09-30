@@ -91,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
         </a>
       </div>
 
-      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+      <div class="relative mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
         <div class="flex flex-col items-center gap-2 group">
           <div class="w-14 h-14 rounded-full border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-500/10 transition">
             <svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,13 +125,25 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <span class="text-xs text-gray-400 tracking-wider uppercase">Experiencias</span>
         </div>
+
+        <!-- Flecha (móvil): centrada entre los 4 servicios -->
+        <div class="md:hidden absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="animate-bounce">
+            <svg class="w-6 h-6 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+    <!-- Flecha (escritorio): abajo al centro -->
+    <div class="hidden md:flex absolute bottom-8 inset-x-0 justify-center pointer-events-none">
+      <div class="animate-bounce">
+        <svg class="w-6 h-6 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
     </div>
   </section>
 
