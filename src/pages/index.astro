@@ -1,5 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Polvo dorado que flota sobre el logo (posición, tamaño y tiempos variados)
+const particulas = Array.from({ length: 16 }, (_, i) => ({
+  x: Math.round(((i * 37) % 92) + 4),
+  size: 2 + ((i * 5) % 4),
+  delay: ((i * 0.9) % 7).toFixed(1),
+  dur: (6 + ((i * 7) % 5)).toFixed(1),
+  sway: (i % 2 ? 1 : -1) * (10 + ((i * 3) % 18)),
+}));
 ---
 
 <Layout>
@@ -63,11 +72,29 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="mb-8 flex justify-center">
-        <img 
-          src="/logo.jpg" 
-          alt="Brahuer Tours - Turismo y Transporte Chile" 
-          class="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-2xl shadow-2xl shadow-gold-500/10 border border-gold-600/20"
-        />
+        <div class="logo-float relative w-full max-w-md md:max-w-lg lg:max-w-xl">
+          <!-- Resplandor dorado pulsante -->
+          <div class="logo-glow absolute -inset-4 rounded-3xl bg-gold-500/30 blur-2xl pointer-events-none"></div>
+
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl shadow-gold-500/10 border border-gold-600/30">
+            <img
+              src="/logo.jpg"
+              alt="Brahuer Tours - Turismo y Transporte Chile"
+              class="logo-img block w-full"
+            />
+            <!-- Destello que barre el logo -->
+            <div class="logo-shine absolute inset-0 pointer-events-none"></div>
+            <!-- Polvo dorado -->
+            <div class="absolute inset-0 pointer-events-none">
+              {particulas.map((p) => (
+                <span
+                  class="logo-dust"
+                  style={`--x:${p.x}%;--s:${p.size}px;--d:${p.delay}s;--t:${p.dur}s;--w:${p.sway}px`}
+                ></span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-3">
@@ -620,6 +647,52 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <style>
+    /* ===== Logo con vida ===== */
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0) translateZ(0); }
+      50% { transform: translateY(-8px) translateZ(0); }
+    }
+    @keyframes logoBreath {
+      from { transform: scale(1) translateZ(0); }
+      to { transform: scale(1.06) translateZ(0); }
+    }
+    @keyframes logoGlow {
+      0%, 100% { opacity: 0.25; transform: scale(0.97); }
+      50% { opacity: 0.75; transform: scale(1.03); }
+    }
+    @keyframes logoShine {
+      0%, 55% { transform: translateX(-130%) skewX(-18deg); }
+      100% { transform: translateX(130%) skewX(-18deg); }
+    }
+    @keyframes logoDust {
+      0% { transform: translate3d(0, 0, 0) scale(0.6); opacity: 0; }
+      15% { opacity: 0.9; }
+      70% { opacity: 0.7; }
+      100% { transform: translate3d(var(--w), -70vh, 0) scale(1); opacity: 0; }
+    }
+    .logo-float { animation: logoFloat 6s ease-in-out infinite; will-change: transform; }
+    .logo-glow { animation: logoGlow 4s ease-in-out infinite; will-change: opacity, transform; }
+    .logo-img { animation: logoBreath 10s ease-in-out infinite alternate; will-change: transform; backface-visibility: hidden; }
+    .logo-shine {
+      width: 45%;
+      background: linear-gradient(100deg, transparent 0%, rgba(255, 236, 170, 0.0) 20%, rgba(255, 240, 190, 0.95) 50%, rgba(255, 236, 170, 0.0) 80%, transparent 100%);
+      mix-blend-mode: overlay;
+      animation: logoShine 5.5s ease-in-out infinite;
+      will-change: transform;
+    }
+    .logo-dust {
+      position: absolute;
+      left: var(--x);
+      bottom: -8px;
+      width: var(--s);
+      height: var(--s);
+      border-radius: 9999px;
+      background: radial-gradient(circle, #fff3b0 0%, #facc15 55%, rgba(250, 204, 21, 0) 100%);
+      box-shadow: 0 0 8px 2px rgba(250, 204, 21, 0.55);
+      opacity: 0;
+      animation: logoDust var(--t) linear var(--d) infinite;
+      will-change: transform, opacity;
+    }
     @keyframes zoomIn {
       from { transform: scale(1) translateZ(0); }
       to { transform: scale(1.18) translateZ(0); }
